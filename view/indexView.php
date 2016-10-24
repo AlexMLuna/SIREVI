@@ -100,12 +100,12 @@
                         <li class="bold"><a href="http://www.acguanacaste.ac.cr/biodesarrollo/programa-de-ecoturismo"
                             class="collapsible-header  waves-effect waves-teal"><img class="circle" src="assets/img/tortuga.jpg"> Programa Ecoturismo</a></a>
 
-                        <li class="bold active"><a class="collapsible-header active waves-effect waves-teal">Sesion</a>
+                        <li class="bold active"><a class="collapsible-header active waves-effect waves-teal">Sesión</a>
                           <div class="collapsible-body" style="display: block;">
                             <ul>
                               <li><a href=""> Pagina inicio</a></li>
-                              <li><a href="">Iniciar sesion con otra cuenta</a></li>
-                              <li><a href="">Cerrar sesion</a></li>
+                              <li><a href="">Iniciar sesión con otra cuenta</a></li>
+                              <li><a href="">Cerrar sesión</a></li>
                             </ul>
                           </div>
                         </li>
