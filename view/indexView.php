@@ -223,12 +223,11 @@
               <div class="row">
               <div class="input-field col s6">
                 <input id="usuario" type="text" class="form-control"  class="validate">
-              <label for="usuario">  <i class="small material-icons">insert_chart</i>&nbsp; Usuario@ej.com </label>
-              </div>
+                <label for="first_name"><i class="small material-icons">face</i>&nbsp;Nombre </label></div>
 <!--INICIO DE  COLUMNA CONTRASENA-->
               <div class="input-field col s6">
                 <input id="password" type="text" class="validate">
-                <label for="password">  <i class="small material-icons">perm_identity</i>&nbsp; Contraseña</label>
+                  <label for="last_name">&nbsp; Apellido </label>
               </div>
               </div>
 
@@ -236,28 +235,29 @@
 <!--INICION DE LA COLUMNA DEL NOMBRE-->
                 <div class="row">
                   <div class="input-field col s6">
-                    <input id="first_name" type="text" class="validate" name="nombre" class="form-control"/>
-                    <label for="first_name"><i class="small material-icons">face</i>&nbsp;Nombre </label>
+                    <input id="cedula" type="text" class="validate" name="cedula" class="form-control"/>
+                    <label for="cedula"><i class="small material-icons"> picture_in_picture </i>&nbsp; Cedula </label>
+
                   </div>
 
 <!--INICIO DE OTRA COLUMNA-->
               <div class="input-field col s6">
-                <input id="last_name" type="text"class="form-control" class="validate">
-                <label for="last_name">&nbsp; Apellido </label>
+                <input id="password" type="text"class="form-control" class="validate">
+                <label for="password">  <i class="small material-icons">perm_identity</i>&nbsp; Contraseña</label>
               </div>
               </div>
 <!--INICIO DE LA TERCERA FILA-->
 <!--INICIO DE LA COLUMNA DE CEDULA-->
             <div class="row">
-              <div class="input-field col s6">
+              <!--<div class="input-field col s6">
                 <input id="cedula" type="text" class="form-control" class="validate">
                 <label for="cedula"><i class="small material-icons"> picture_in_picture </i>&nbsp; Cedula </label>
-              </div>
+              </div>-->
 
 
 <!--INICIO DE COLUMNA DEL PUESTO EN LA EMPRESA-->
               <div class="row">
-                <div class="input-field col s6">
+                <div class="input-field col s12">
                   <input id="puesto" type="text"  class="form-control" class="validate">
                   <label for="puesto"><i class="small material-icons">description</i>&nbsp;Puesto en institucion </label>
                 </div>
@@ -274,13 +274,13 @@
                 <button class="btn waves-effect waves-light" value="enviar" type="submit" name="action">Enviar
                   <i class="mdi-content-send right"></i>
                 </button>
-                <button class="btn waves-effect waves-light" value="reset" type="reset" name="action">Limpiar
-                  <i class="mdi-content-send right"></i>
-                </button>
-
+                  <button class="btn waves-effect waves-light" value="reset" type="reset" name="action">Limpiar
+                    <i class="mdi-content-send right"></i>
+                  </button>
+                </div>
               </form>
 
-            </div>
+
           </div>
 
         </div>
