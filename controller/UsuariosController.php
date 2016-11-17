@@ -27,11 +27,11 @@ class UsuariosController extends ControladorBase{
 
             //CREAMOS UN USUARIO NUEVO
             $usuario=new Usuario();
-            $usuario->setUsuario($_POST["usuario"]);
-            $usuario->setContrasena($_POST["contrasena"]);
+      //      $usuario->setUsuario($_POST["usuario"]);
             $usuario->setNombre($_POST["nombre"]);
             $usuario->setApellido($_POST["apellido"]);
             $usuario->setCedula($_POST["cedula"]);
+            $usuario->setContrasena(sha1($_POST["contrasena"]));
             $usuario->setPuesto($_POST["puesto"]);
             $usuario->setEmail($_POST["email"]);
 
@@ -55,7 +55,7 @@ class UsuariosController extends ControladorBase{
       public function modificar(){
         if(isset($_GET["id"])){/*PARA MODIFICAR SE BUSCARA CON LA CEDULA*/
             $id=(int)$_GET["id"];
-        echo "El usuario esta ne base de datos";/*ENVIA RESPUESTA*/
+        echo "El usuario esta en base de datos";/*ENVIA RESPUESTA*/
       }
 }
 

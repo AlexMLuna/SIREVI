@@ -8,14 +8,14 @@ class ModeloBase extends EntidadBase{
     public function __construct($table) {
         $this->table=(string) $table;
         parent::__construct($table);
-         
-       // $this->fluent=$this->getConetar()->startFluent();
+
+        $this->fluent=$this->getConetar()->startFluent();
     }
-     /*
+
     public function fluent(){
         return $this->fluent;
-    }*/
- 
+    }
+
 //METODO QUE ME EJECUTA SQL
     public function ejecutarSql($query){
     //ESTE METODO SE ENCARGA DE SABER SI ESA QUIERY DEVUELVE UNO O VARIOS VALORES
@@ -35,12 +35,12 @@ class ModeloBase extends EntidadBase{
         }else{
             $resultSet=false;
         }
-         
+
         return $resultSet;
     }
-    
-    //Aqui podemos montarnos métodos para los modelos de consulta  
 
-    
+    //Aqui podemos montarnos métodos para los modelos de consulta
+
+
 }
 ?>
