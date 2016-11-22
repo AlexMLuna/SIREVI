@@ -4,7 +4,7 @@
         "host"      =>"localhost",
         "user"      =>"root",
         "pass"      =>"",
-        "database"  =>"pruebas",
+        "database"  =>"sirevi",
         "charset"   =>"utf8"
     );
 ?>

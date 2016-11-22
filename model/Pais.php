@@ -38,10 +38,10 @@ class Pais extends EntidadBase{
 
 
     public function save(){
-        $query="INSERT INTO pais (id,nombre,codigo)"
-                ."VALUES(NULL,"
-                       ."'".$this->nombre   ."',"
-                       ."'".$this->codigo   ."');";
+        $query="INSERT INTO pais (id,nombre,codigo)
+                VALUES(NULL,
+                       '".$this->nombre   ."',
+                       '".$this->codigo   ."');";
 
       //SE INVOCA EL METODO DB QUE LO HEREDAMOS DE ENTIDAD BASE
         $save=$this->db()->query($query);

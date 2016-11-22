@@ -7,11 +7,11 @@
 <!--        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" /> -->
         <link href="//estilos.php" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="../assets/js/jquery.anexsoft-validator.js"></script>
-        <script type="text/javascript" src="/assets/js/indexUsuarios.js"></script>
+      <!--  <script type="text/javascript" src="../assets/js/indexUsuarios.js"></script> -->
     <!--    <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min."></script>
-      <link rel="stylesheet" type="text/css" href="assets/css/estilos.css" />
+    <!--  <link rel="stylesheet" type="text/css" href="assets/css/estilos.css" />
     <!--    <link rel="stylesheet" href="assets/css/style1.css" /> -->
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.min.js"/>
@@ -31,9 +31,6 @@
       $('.slider').slider({full_width: true});
       $('.carousel').carousel();
       $('.collapsible').collapsible();
-
-
-    /*   $(".dropdown-button").dropdown(hover:false);*/
     })
 
 
@@ -42,7 +39,7 @@
       <div class="slider">
          <ul class="slides">
            <li>
-             <img src="https://www.google.com/search?q=Parque+nacional+santa+rosa&client=firefox-b-ab&biw=1366&bih=657&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiboufN74zQAhVO7GMKHdDoBw0Q_AUIBygC#imgrc=seDSM-kv20BQvM%3A"> <!-- random image -->
+             <img src="assets/img/.jpg"> <!-- random image -->
              <div class="caption center-align">
                <h3>Bienvenido Area de Conservacion Guanacaste</h3>
                <h5 class="light grey-text text-lighten-3">Sistema Registro de Visitacion</h5>
@@ -50,16 +47,18 @@
            </li>
            <!--===============================================================================================================-->
            <li>
-          <img class="background" src="assets/img/CasonaSantaRosa.jpg"> <!-- random image -->
+          <img class="background" src="assets/img/Santa_Rosa2.jpg"> <!-- random image -->
              <div class="caption center-align">
                <h3>Sector Santa Rosa</h3>
-               <h5 class="light grey-text text-lighten-3">TEXTO SOBRE EL SECTOR SANTA ROSA</h5>
+               <h5 class="light grey-text text-lighten-3"><p>El Sector Santa Rosa del Área de Conservación Santa Rosa está en el corazón del bosque tropical seco,
+                  cuna de historia y tradiciones que guarda el Museo de La Casona de Santa Rosa,
+                   hogar del Centro de Investigación del ACG y las oficinas administrativas del ACG.<p></h5>
              </div>
            </li>
            <!--===============================================================================================================-->
 
            <li>
-             <img src="http://lorempixel.com/580/250/nature/2"> <!-- random image -->
+             <img src="assets/img/pailas3.jpg"> <!-- random image -->
              <div class="caption left-align">
                <h3>Sector Pailas</h3>
                <h5 class="light grey-text text-lighten-3">Pailas es uno de los sectores mas visitados.</h5>
@@ -68,7 +67,7 @@
            <!--===============================================================================================================-->
 
            <li>
-             <img src="http://lorempixel.com/580/250/nature/2"> <!-- random image -->
+             <img src="assets/img/junquillal3.jpg"> <!-- random image -->
              <div class="caption left-align">
                <h3>Sector Junquillal</h3>
                <h5 class="light grey-text text-lighten-3">Junquilla es una playa bonita...</h5>
@@ -76,23 +75,26 @@
            </li>
            <!--======================================================================================================================-->
            <li>
-             <img src="http://lorempixel.com/580/250/nature/2"> <!-- random image -->
+             <img src="assets/img/sector_Murcielago.jpg"> <!-- random image -->
              <div class="caption left-align">
                <h3>Sector Murcielago</h3>
-               <h5 class="light grey-text text-lighten-3">Pailas es uno de los sectores mas visitados.</h5>
+               <h5 class="light grey-text text-lighten-3">Murcielago es uno de los sectores mas visitados.</h5>
              </div>
            </li>
          <!--======================================================================================================================-->
            <li>
-             <img src="http://lorempixel.com/580/250/nature/3"> <!-- random image -->
+             <img src="assets/img/santamaria3.jpg"> <!-- random image -->
              <div class="caption right-align">
                <h3>Sector Santa Maria</h3>
-               <h5 class="light grey-text text-lighten-3">En el sector snata maria hay barro volcanico</h5>
+               <h5 class="light grey-text text-lighten-3"><p>El Sector Santa María del Área de Conservación Guanacaste,
+                  ubicado en la parte sureste del Volcán Rincón de la Vieja,
+                  es un busque húmedo donde se pueden apreciar varrias cataratas y ríos,
+                   así como unas aguas tarmales y un sendero que comunica con el Sector Pailas.<p></h5>
              </div>
            </li>
            <!--=======================================================================================================================-->
            <li>
-             <img src="http://lorempixel.com/580/250/nature/4"> <!-- random image -->
+             <img src="assets/img/horizontes.jpg"> <!-- random image -->
              <div class="caption center-align">
                <h3>Sector Horizontes</h3>
                <h5 class="light grey-text text-lighten-3">Informacion sobre el sector horizontes</h5>
@@ -102,14 +104,122 @@
        </div>
     </header>
     <body class="body" >
+      <!--INICIO DEL side nav-->
+      <!--==============================================MENU HORIZONTAL BOTON ROJA=================================================================-->
+      <nav>
+         <div class="nav-wrapper">
 
+           <a href="#!" class="brand-logo">&nbsp; SIREVI</a>
+           <ul class="right hide-on-med-and-down" class="fixed-action-btn toolbar">
+             <div class="fixed-action-btn toolbar">
+        <a class="btn-floating btn-large red">
+          <i class="large material-icons ">add</i><!--BOTON FLOTANTE-->
+        </a>
+        <ul>
+          <li class="waves-effect waves-light"><a href="#!"><i class="material-icons">insert_chart</i></a></li>
+          <li class="waves-effect waves-light"><a href="#!"><i class="material-icons">format_quote</i></a></li>
+          <li class="waves-effect waves-light"><a href="#!"><i class="material-icons">publish</i></a></li>
+          <li class="waves-effect waves-light"><a href="#!"><i class="material-icons">attach_file</i></a></li>
+        </ul>
+      </div>
+      <!-- Dropdown Trigger -->
+ <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Categoria de Registros</a>
+
+ <!-- Dropdown Structure -->
+ <ul id='dropdown1' class='dropdown-content'>
+   <li><a href="http://localhost/Registro_Responsive_usuarios_v2/">Registrar Usuarios</a></li><!--Recordar la ortografia-->
+   <li><a href="http://localhost/Registro_Responsive_usuarios_v2/view/registroPais.php">Registar Pais</a></li><!--Recordar la ortografia-->
+   <li class="divider"></li>
+   <li><a href="#!">Otro modulo mas</a></li>
+ </ul>
+             <li><a href=""><i class="material-icons right">view_module</i>Inicio</a></li>
+           </ul>
+             <a href="#" data-activates="slide-out" class="button-collapse"><i  style="color:red" class="medium material-icons">toc</i></a>
+         </div>
+
+
+       </nav>
+      <!--======================================================================================================================-->
+
+
+      <!--==========================================================OPCIONES PARA EL MENU LATERAL DEL RESPONSIVE-->
+      <!--================================== MENU LATERAL DESPLEGABLE <> INFORMACION DENTRO DEL SIDENAV-->
+      <div  class="z-depth-2">
+           <ul id="slide-out" class="side-nav" >
+             <ul id="nav-mobile" class="side-nav fixed" style="transform: translateX(0px);">
+               <li><div class="userView">
+                 <img class="background" src="assets/img/CasonaSantaRosa.jpg">
+                 <a href="#!user"><img class="circle" src="assets/img/yo.JPG"></a>
+                 <a href="#!name"><span class="white-text name">Alex M.Luna</span></a>
+                 <a href="#!email"><span class="white-text email">cheeto12@gmail.com</span></a></div>
+               </li>
+
+      <!--============================================>> INICIO DE LA BARRA DE BUSCADOR side nav <<===================================================================-->
+               <li class="search">
+                 <nav>
+                   <div class="nav-wrapper">
+                       <form class="z-depth-2" >
+                         <div class="input-field">
+                           <input id="search" type="search" required>
+                           <label for="search"><i href="#!" class="material-icons">search</i></label>
+                           <i class="material-icons">close</i>
+                         </div>
+                       </form>
+                     </div>
+                 </nav>
+               </li>
+             <li class="bold"><a href="http://www.acguanacaste.ac.cr/" class="waves-effect waves-teal">
+               <img class="circle" src="assets/img/logoACG.png"> Area Conservacion Guanacaste</a> </a></li>
+
+             <ul class="collapsible" data-collapsible="accordion">
+             <li>
+             <li class="bold"><a href="http://www.acguanacaste.ac.cr/turismo/sector-santa-rosa" class="waves-effect waves-teal">
+               <img class="circle" src="assets/img/SantaRosaLogo.jpg"> Informacion del Sector</a></a></li>
+
+             <li class="no-padding">
+               <ul class="collapsible collapsible-accordion">
+                 <li class="bold"><a class="collapsible-header  waves-effect waves-teal">
+                     <img class="circle" src="assets/img/logoSitio.png"> Sitios Turisticos</a></a>
+
+                   <div class="collapsible-body" style="display: block;">
+                     <ul>
+                       <li><a href="http://www.acguanacaste.ac.cr/turismo/sector-santa-rosa">Sector Santa Rosa</a></li>
+                       <li><a href="">Sector Junquillal</a></li>
+                       <li><a href="">Sector Santa Maria</a></li>
+                       <li><a href="">Sector Horizontes</a></li>
+                       <li><a href="">Sector Pailas</a></li>
+                       <li><a href="">Sector Murcielago</a></li>
+                       <li><a href="">Sector Marino</a></li>
+                     </ul>
+                   </div>
+                 </li>
+
+                 <li class="bold"><a href="http://www.acguanacaste.ac.cr/biodesarrollo/programa-de-ecoturismo"
+                     class="collapsible-header  waves-effect waves-teal"><img class="circle" src="assets/img/tortuga.jpg"> Programa Ecoturismo</a></a>
+
+                 <li class="bold active"><a class="collapsible-header active waves-effect waves-teal">
+                                                                        <i class="small material-icons">perm_identity</i>Sesion</a>
+
+                   <div class="collapsible-body" style="display: block;">
+                  <!--   <ul>
+                       <li><a href=""> Pagina inicio</a></li>
+                       <li><a href="">Iniciar sesion con otra cuenta</a></li>
+                       <li><a href="">Cerrar sesion</a></li>
+                     </ul>-->
+                   </div>
+                 </li>
+               </ul>
+             </li>
+           <li class="bold"><a href="REFERENCIA A LA PAGINA DE LISTADO USUARIOS" class="waves-effect waves-teal">Opcion Registros*</a></li>
+           </ul>
+
+         </div><!--Fin de codigo Alex
       <nav class="z-depth-3" id="navegador">
          <div class="nav-wrapper">
              <a href="#!" class="brand-logo center">&nbsp; </a>
         <!--     <a href="#" data-activates="mobile-demo" class="button-collapse">Menu<i class="material-icons">menu</i></a>-->
              <ul id="dropdown1" class="dropdown-content">
               <li><a href="#!">Reiniciar</a></li>
-              <li><a href="#!">Iniciar con otra cuenta</a></li>
               <li class="divider"></li>
               <li><a href="REFERENCIA A LOGIN"></i>Cerrar</a></li>
             </ul>
@@ -166,19 +276,7 @@
                    <div class="row"><!---INICIO DE LA PRIMERA FILA-->
                    <div class="input-field col s4"><!--INICIO DE LA PRIMERA COLUMNA-->
                      <div class="row">
-                       <div >
-                         <div class="card blue-grey darken-1">
-                           <div class="card-content white-text">
-                             <span class="card-title">AQUI VA UN TITULO</span>
-                             <p>Esta es una carta muy simple.Soy muy buena conteniendo pequena informacion.
-                            Soy conveniente porque reuiqero una pequeno margen para ser usada eficientemente.</p>
-                           </div>
-                           <div class="card-action">
-                             <a href="#">Aqui va un link</a>
-                             <a href="#">Aqui va otro link</a>
-                           </div>
-                         </div>
-                       </div>
+                  <img class="materialboxed" data-caption="A picture of some deer and tons of trees" width="250" src="http://th01.deviantart.net/fs70/PRE/i/2013/126/1/e/nature_portrait_by_pw_fotografie-d63tx0n.jpg">
                      </div>
                  </div><!--FIN DEL DIV QUE ME DECLARA EL TAMANO DE LA CARTA-->
 

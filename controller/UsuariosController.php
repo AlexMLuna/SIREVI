@@ -40,6 +40,7 @@ class UsuariosController extends ControladorBase{
         $this->redirect("Usuarios", "index");
     }
 
+
     public function borrar(){
         if(isset($_GET["id"])){
             $id=(int)$_GET["id"];
@@ -52,11 +53,25 @@ class UsuariosController extends ControladorBase{
 
 /*EL METODO MODIFICAR LE FALTA MAS DE HACER...*/
 /*ME IDENTIFICA EL ID DEL USUARIO*/
-      public function modificar(){
-        if(isset($_GET["id"])){/*PARA MODIFICAR SE BUSCARA CON LA CEDULA*/
-            $id=(int)$_GET["id"];
+      public function modificar($id){
+        if(isset($_GET["id"])==$id){/*PARA MODIFICAR SE BUSCARA CON LA CEDULA*/
+
+              //CREAMOS UN USUARIO NUEVO
+              $usuario=new Usuario();
+        //      $usuario->setUsuario($_POST["usuario"]);
+              $usuario->setNombre($_POST["nombre"]);
+              $usuario->setApellido($_POST["apellido"]);
+              $usuario->setCedula($_POST["cedula"]);
+              $usuario->setContrasena(sha1($_POST["contrasena"]));
+              $usuario->setPuesto($_POST["puesto"]);
+              $usuario->setEmail($_POST["email"]);
+
+              $save=$usuario->save();
+          }
+          $this->redirect("Usuarios", "index");
+
         echo "El usuario esta en base de datos";/*ENVIA RESPUESTA*/
-      }
+
 }
 
 /*===========================================================================================*/

@@ -41,6 +41,11 @@
              });
 
            });
+           $(document).ready(function(){
+              // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+              $('.modal').modal();
+            });
+
           </script>
           <header>
                 <div class="container"><a href="#" data-activates="nav-mobile"
@@ -169,9 +174,9 @@
     <li class="waves-effect waves-light"><a href="#!"><i class="material-icons">attach_file</i></a></li>
   </ul>
 </div>
-       <li><a href=""><i class="material-icons right">view_module</i>Inicio</a></li>
+       <li><a href="http://localhost/Registro_Responsive_usuarios_v2/view/menu_principal.php"><i class="material-icons right">view_module</i>Inicio</a></li>
      </ul>
-       <a href="#" data-activates="slide-out" class="button-collapse"><i  style="color:whiite" class="medium material-icons">toc</i></a>
+       <a href="#" data-activates="slide-out" class="button-collapse"><i  style="color:white" class="medium material-icons">toc</i></a>
    </div>
 
 
@@ -238,8 +243,8 @@
 
              <div class="collapsible-body" style="display: block;">
                <ul>
-                 <li><a href=""> Pagina inicio</a></li>
-                 <li><a href="">Iniciar sesion con otra cuenta</a></li>
+                 <li><a href="http://localhost/Registro_Responsive_usuarios_v2/view/menu_principal.php"> Pagina inicio</a></li>
+
                  <li><a href="">Cerrar sesion</a></li>
                </ul>
              </div>
@@ -264,18 +269,21 @@
           <div class="col s6 m7 l7">
             <div class="row">
 
-              <form id="formulario" action="<?php echo $helper->url("usuarios","crear"); ?>" method="post" class="col s18" >
+            <form id="formulario" action="<?php echo $helper->url("usuarios","crear"); ?>" method="post" class="col s18" >
+            <div>
 
-              <div class="row"><!---INICIO DE LA PRIMERA FILA-->
-              <div class="input-field col s6 l6">
-                <input id="first_name" type="text" class="form-control"  class="validate">
-              <label for="first_name"> <i class="small material-icons">face</i> &nbsp;Nombre</label>
-            </div>
+                <div class="row"><!---INICIO DE LA PRIMERA FILA-->
+                  <div class="input-field col s6 l6">
+                    <input id="first_name" type="text" name="nombre" class="form-control"  class="validate">
+                    <label for="first_name"> <i class="small material-icons">face</i> &nbsp;Nombre</label>
+                  </div>
+                  
+
 
   <!--INICIO DE COLUMNA APELLIDO-->
               <div class="input-field col s6">
-                <input  id="last_name" type="text" class="validate" class="form-control">
-                <label for="last_name" >  <i class="small material-icons"></i>&nbsp; Apellido</label>
+                <input  id="last_name" type="text" name="apellido" class="validate" class="form-control">
+                <label for="last_name" >  <i class="small material-icons">recent_actors</i>Apellido</label>
               </div>
             </div><!--FIN DEL DIV DE LA PRIMERA FILA -->
 
@@ -284,12 +292,12 @@
   <!--INICION DE COLUMNA DEL CEDULA-->
                 <div class="row"><!--INICIO DEL DIV DE LA SEGUNDA FILA-->
                   <div class="input-field col s6">
-                    <input id="cedula"  type="text" class="validate"  class="form-control"/>
+                    <input id="cedula"  type="text" name="cedula" class="validate"  class="form-control"/>
                     <label for="cedula"  ><i class="small material-icons">picture_in_picture</i>&nbsp; Cedula</label>
                   </div>
   <!--INICIO DE COLUMNA CONTRASENA-->
               <div class="input-field col s6">
-                <input id="password" type="text"class="form-control" class="validate">
+                <input id="password" type="password" name="contrasena" class="form-control" class="validate">
                 <label for="password" > <i class="small material-icons">perm_identity</i>&nbsp; Contraseña</label> </label>
               </div>
             </div><!--FIN DEL DIV DE LA SEGUNDA FILA-->
@@ -300,7 +308,7 @@
           <div class="row"><!--INICIO DE TERCERA FILA-->
               <div class="row">
                 <div class="input-field col s12">
-                  <input id="puesto" type="text"  class="form-control" class="validate">
+                  <input id="puesto" type="text" name="puesto" class="form-control" class="validate">
                   <label for="puesto"><i class="small material-icons">description</i>&nbsp;Puesto en institucion </label>
                 </div>
               </div>
@@ -312,7 +320,7 @@
         Escriba su correo electronico correctamente:
               <div class="row">
                 <div class="input-field">
-           <input id="email" type="email" class="validate" class="form-control">
+           <input id="email" type="email" name="email" class="validate" class="form-control">
            <label for="email" data-error="wrong" data-success="right"><i class="small material-icons"> email </i></label>
          </div>
        </div>
@@ -320,37 +328,113 @@
     </div>
 
 
-<!--BOTON QUE ME ENVIA EL FORMULARIO-->
-<button class="btn waves-effect waves-light" value="enviar" type="submit" name="action">Enviar<i class="mdi-content-send right"></i></button>
-<button class="btn waves-effect waves-light" value="reset" type="reset" name="action">Limpiar<i class="mdi-content-send right"></i></button>
-
-              </form>
+              <!--BOTON QUE ME ENVIA EL FORMULARIO-->
+            <button class="btn waves-effect waves-light" value="enviar" type="submit" name="action">Enviar<i class="mdi-content-send right"></i></button>
+            <button class="btn waves-effect waves-light" value="reset" type="reset" name="action">Limpiar<i class="mdi-content-send right"></i></button>
+          </div>
+        </form>
           </div>
 
         </div>
       </div>
 
   <!--INICIO DE LOS USUARIOS REGISTRADOS-->
-  <div class="col-lg-12">
+  <div class="col-lg-18">
   <ul class="collapsible popout" data-collapsible="accordion">
     <li>
       <div class="collapsible-header"><i class="material-icons">recent_actors</i>Listado de usuarios registrados en el sistema</div>
 
       <div class="collapsible-body">
         <h5><i class="tiny material-icons">visibility</i> Lista de Usuarios </h5>
-        <section class="col-lg-12 usuario" style="height:400px;overflow-y:scroll;">
+        <section class="col-lg-18 usuario" style="height:400px;overflow-y:scroll;">
 
              <br>
                <?php foreach($allusers as $user) { //RECORREMOS EL ARRAY DE OBJETOS Y OBTENEMOS EL VALOR DE LAS PROPIEADES ?>
                 <?php echo $user->id; ?> ----
-
                 <?php echo $user->nombre; ?>
                 <?php echo $user->apellido; ?> ---
                 <?php echo $user->cedula; ?> ---
                 <?php echo $user->email; ?>
-                <div class="right">
-                  <!--LLAMADO DE LA FUNCION QUE ESTA DECLARADA EN EL UsuariosController.php-->
-                    <a href="<?php echo $helper->url("usuarios","borrar"); ?>&id=<?php echo $user->id; ?>" class="btn btn-danger">Borrar</a>
+
+    <!--LLAMADO DE LA FUNCION QUE ESTA DECLARADA EN EL UsuariosController.php-->
+      <div class="right">
+<!--=======================================Inicio de la barra lateral para el formulario de modificar========================================================================================-->
+              <ul id="slide-out_1" class="side-nav" class="col-lg-12" >
+                <li><div class="userView">
+                  <img class="background" src="assets/img/CasonaSantaRosa.jpg">
+                  <a href="#!user"><img class="circle" src="assets/img/yo.JPG"></a>
+                  <a href="#!name"><span class="white-text name">Alex M.Luna</span></a>
+                  <a href="#!email"><span class="white-text email">cheeto12@gmail.com</span></a></div>
+                </li>
+
+                <div class="col-lg-10" >
+
+                <h5>Modificar Usuarios</h5>
+
+                <hr>
+
+                        <form id="formulario" action="<?php echo $helper->url("usuarios","modificar"); ?>" method="post" class="col s14" >
+                          <div class="">
+                            <div class="row"><!---INICIO DE LA PRIMERA FILA-->
+                              <div class="input-field col s6 ">
+                                <input id="first_name_side" type="text" name="nombre" class="form-control"  class="validate">
+                                <label for="first_name_side"> <i class="small material-icons">face</i><?php echo $user->nombre;?></label>
+                              </div>
+          <!--INICIO DE COLUMNA APELLIDO-->
+                    <div class="input-field col s6">
+                      <input  id="last_name_side" type="text" name="apellido" class="validate" class="form-control">
+                      <label for="last_name_side" >  <i class="small material-icons">recent_actors</i><?php echo $user->apellido; ?></label>
+                  </div>
+                </div><!--FIN DEL DIV DE LA PRIMERA FILA -->
+          <!--INICIO DE LA FILA 2-->
+          <!--INICION DE COLUMNA DEL CEDULA-->
+                    <div class="row"><!--INICIO DEL DIV DE LA SEGUNDA FILA-->
+                      <div class="input-field col s6">
+                        <input id="cedula_side"  type="text" name="cedula" class="validate"  class="form-control"/>
+                        <label for="cedula_side"  ><i class="small material-icons">picture_in_picture</i><?php echo $user->cedula; ?></label>
+                      </div>
+          <!--INICIO DE COLUMNA CONTRASENA-
+                  <div class="input-field col s4">
+                    <input id="password" type="password" name="contrasena" class="form-control" class="validate">
+                    <label for="password" > <i class="small material-icons">perm_identity</i>&nbsp; Contraseña</label> </label>
+                  </div>-->
+                </div><!--FIN DEL DIV DE LA SEGUNDA FILA-->
+          <!--INICIO DE LA TERCERA FILA-->
+          <!--INICIO DE LA COLUMNA PUESTO EN INSTITUCION-->
+              <div class="row"><!--INICIO DE TERCERA FILA-->
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="puesto_side" type="text" name="puesto" class="form-control" class="validate">
+                      <label for="puesto_side"><i class="small material-icons">description</i> <?php echo $user->puesto; ?></label>
+                    </div>
+                  </div>
+                </div><!--FIN DE LA TERCERA FILA-->
+          <!--INICIO DE LINEAS PARA EL CORREO-->
+          <div class="row">
+          <div class="col s12">
+            Escriba su nuevo correo electronico:
+                  <div class="row">
+                    <div class="input-field">
+               <input id="email_side" type="email" name="email" class="validate" class="form-control">  <?php echo $user->email; ?>
+               <label for="email_side" data-error="wrong" data-success="right"><i class="small material-icons"> email </i></label>
+             </div>
+           </div>
+          </div>
+          </div>
+                  <!--BOTON QUE ME ENVIA EL FORMULARIO-->
+
+                <button class="btn waves-effect waves-light" value="enviar" type="submit" name="action"><i class="small material-icons">done</i></button>
+                <button class="btn waves-effect waves-light" value="reset" type="reset" name="action"><i class="small material-icons">delete</i></button>
+              </div>
+            </form>
+          </div>
+
+   </ul>
+   <a href="<?php echo $helper->url("usuarios","modificar"); ?>&id=<?php echo $user->id; ?>" data-activates="slide-out_1" class="button-collapse">
+     <i class="small material-icons">edit</i></a>
+
+  <!--==========================================Fin de modal para modificar==============================================================================-->
+                    <a href="<?php echo $helper->url("usuarios","borrar"); ?>&id=<?php echo $user->id; ?>"><i class="small material-icons">delete</i></a>
                 </div>
                 <hr/>
             <?php } ?>
@@ -359,26 +443,7 @@
     </li>
   </ul>
 </div>
-<!--
-          <h5>  Usuarios Registrados </h5>
-          <hr/>
-      <section class="col-lg-12 usuario" style="height:400px;overflow-y:scroll;">
 
-           <br>
-             <c?php foreach($allusers as $user) { //RECORREMOS EL ARRAY DE OBJETOS Y OBTENEMOS EL VALOR DE LAS PROPIEADES ?>
-              <c?php echo $user->id; ?>
-            <;?php echo $user->usuario; ?,> --
-              <c?php echo $user->nombre; ?>
-              <c?php echo $user->apellido; ?> ---
-              <c?php echo $user->cedula; ?> ---
-              <c?php echo $user->email; ?>
-              <div class="right">
-                <!--LLAMADO DE LA FUNCION QUE ESTA DECLARADA EN EL UsuariosController.php--
-                  <a href="<c?php echo $helper->url("usuarios","borrar"); ?>&id=<d?php echo $user->id; ?>" class="btn btn-danger">Borrar</a>
-              </div>
-              <hr/>
-          <c?php } ?>
-      </section>-->
 </div><!--FIN DE container-contact-->
       <footer class="page-footer">
            <div class="container">
