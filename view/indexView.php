@@ -154,6 +154,7 @@
               </header>
 
 <body class="body" >
+
 <!--INICIO DEL side nav-->
 <!--==============================================MENU HORIZONTAL BOTON ROJA=================================================================-->
 <nav>
@@ -162,20 +163,20 @@
      <a href="#!" class="brand-logo">&nbsp; SIREVI</a>
      <ul class="right hide-on-med-and-down" class="fixed-action-btn toolbar">
        <div class="fixed-action-btn toolbar">
-  <a class="btn-floating btn-large red">
-    <i class="large material-icons ">add</i><!--BOTON FLOTANTE-->
-  </a>
-  <ul>
-    <li class="waves-effect waves-light"><a href="#!"><i class="material-icons">insert_chart</i></a></li>
-    <li class="waves-effect waves-light"><a href="#!"><i class="material-icons">format_quote</i></a></li>
-    <li class="waves-effect waves-light"><a href="#!"><i class="material-icons">publish</i></a></li>
-    <li class="waves-effect waves-light"><a href="#!"><i class="material-icons">attach_file</i></a></li>
-  </ul>
-</div>
-       <li><a href="http://localhost/Registro_Responsive_usuarios_v2/view/menu_principal.php"><i class="material-icons right">view_module</i>Inicio</a></li>
-     </ul>
-       <a href="#" data-activates="slide-out" class="button-collapse"><i  style="color:white" class="medium material-icons">toc</i></a>
-   </div>
+        <a class="btn-floating btn-large red">
+          <i class="large material-icons ">add</i><!--BOTON FLOTANTE-->
+        </a>
+        <ul>
+          <li class="waves-effect waves-light"><a href="#!"><i class="material-icons">insert_chart</i></a></li>
+          <li class="waves-effect waves-light"><a href="#!"><i class="material-icons">format_quote</i></a></li>
+          <li class="waves-effect waves-light"><a href="#!"><i class="material-icons">publish</i></a></li>
+          <li class="waves-effect waves-light"><a href="#!"><i class="material-icons">attach_file</i></a></li>
+        </ul>
+      </div>
+             <li><a href="http://localhost/Registro_Responsive_usuarios_v2/view/menu_principal.php"><i class="material-icons right">view_module</i>Inicio</a></li>
+           </ul>
+             <a href="#" data-activates="slide-out" class="button-collapse"><i  style="color:white" class="medium material-icons">toc</i></a>
+         </div>
 
 
  </nav>
@@ -326,7 +327,7 @@
     </div>
 
 
-              <!--BOTON QUE ME ENVIA EL FORMULARIO-->
+<!--BOTON QUE ME ENVIA EL FORMULARIO-->
             <button class="btn waves-effect waves-light" value="enviar" type="submit" name="action">Enviar<i class="mdi-content-send right"></i></button>
             <button class="btn waves-effect waves-light" value="reset" type="reset" name="action">Limpiar<i class="mdi-content-send right"></i></button>
           </div>
@@ -354,21 +355,20 @@
                 <?php echo $user->cedula; ?> ---
                 <?php echo $user->email; ?>
 
-    <!--LLAMADO DE LA FUNCION QUE ESTA DECLARADA EN EL UsuariosController.php-->
+
       <div class="right">
 <!--=======================================Inicio de la barra lateral para el formulario de modificar========================================================================================-->
-              <ul id="slide-out_1" class="side-nav" class="col-lg-12" >
-                <li><div class="userView">
-                  <img class="background" src="assets/img/CasonaSantaRosa.jpg">
+              <ul id="slide-out_1" class="side-nav" style="width:400px" class="col s9 m9 l4" >
+                <li><div class="userView" >
+                  <img class="background" style="width:400px" src="assets/img/CasonaSantaRosa.jpg">
                   <a href="#!user"><img class="circle" src="assets/img/yo.JPG"></a>
                   <a href="#!name"><span class="white-text name">Alex M.Luna</span></a>
                   <a href="#!email"><span class="white-text email">cheeto12@gmail.com</span></a></div>
                 </li>
 
+
                 <div class="col-lg-10" >
-
                 <h5>Modificar Usuarios</h5>
-
                 <hr>
 
                         <form id="formulario" action="<?php echo $helper->url("usuarios","modificar"); ?>" method="post" class="col s14" >
@@ -419,24 +419,27 @@
            </div>
           </div>
           </div>
-                  <!--BOTON QUE ME ENVIA EL FORMULARIO-->
+        
 
-                <button class="btn waves-effect waves-light" value="enviar" type="submit" name="action"><i class="small material-icons">done</i></button>
-                <button class="btn waves-effect waves-light" value="reset" type="reset" name="action"><i class="small material-icons">delete</i></button>
+    <!--==========BOTON QUE ME ENVIA EL FORMULARIO MODIFICADO-->
+                <button href="<?php echo $helper->url("usuarios","modificar"); ?>&id=<?php echo $user->id; ?>"
+                  class="btn waves-effect waves-light" value="modificar" type="submit" name="action"><i class="small material-icons">done</i></button>
+  <!--==========================================================================================================================-->
+                <button class="btn waves-effect waves-light" value="reset" type="submit" name="action"><i class="small material-icons">delete</i></button>
               </div>
             </form>
           </div>
 
    </ul>
-   <a href="<?php echo $helper->url("usuarios","modificar"); ?>&id=<?php echo $user->id; ?>" data-activates="slide-out_1" class="button-collapse">
+   <a href="" data-activates="slide-out_1" class="button-collapse">
      <i class="small material-icons">edit</i></a>
 
   <!--==========================================Fin de modal para modificar==============================================================================-->
                     <a href="<?php echo $helper->url("usuarios","borrar"); ?>&id=<?php echo $user->id; ?>"><i class="small material-icons">delete</i></a>
-                </div>
-                <hr/>
-            <?php } ?>
-        </section>
+    </div>
+    <hr>
+    <?php } ?>
+  </section>
       </div>
     </li>
   </ul>
